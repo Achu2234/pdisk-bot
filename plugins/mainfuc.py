@@ -4,7 +4,8 @@ from datetime import datetime
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
-    ForceReply
+    ForceReply,
+    Message
 )
 from pdisk import pdisk_url , api_check
 from database import insert , find , set , getid
