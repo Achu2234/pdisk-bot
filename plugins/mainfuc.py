@@ -41,7 +41,7 @@ async def start(client,message):
 @Client.on_message(filters.command("ping"))
 async def ping_pong(client, m: Message):
     start = time()
-    m_reply = await m.reply_text("pinging...")
+    m_reply = await m.reply_text("Pinging...")
     delta_ping = time() - start
     await m_reply.edit_text(
         "🏓 `PONG!!`\n"
@@ -55,9 +55,9 @@ async def get_uptime(client, m: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await m.reply_text(
-        "🤖 bot status:\n"
-        f"• **uptime:** `{uptime}`\n"
-        f"• **start time:** `{START_TIME_ISO}`"
+        "🤖 Bot status:\n"
+        f"• **Uptime:** `{uptime}`\n"
+        f"• **Start time:** `{START_TIME_ISO}`"
     )   
 
 @Client.on_message(filters.private & filters.command(['connect']))
